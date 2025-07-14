@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "book")
+@Table(name = "books")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,7 +22,7 @@ public class Book {
     @Column(nullable = false)
     private String author;
 
-    private int year;
+    private int publicationYear;
     private String genre;
 }
 

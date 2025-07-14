@@ -2,9 +2,10 @@ package com.portfolio.cadastro_livros.infrastructure.entitys;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "loan")
+@Table(name = "loans")
 @Getter
 @Setter
 @AllArgsConstructor
