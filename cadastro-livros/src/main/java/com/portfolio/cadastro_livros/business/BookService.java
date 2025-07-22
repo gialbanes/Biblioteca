@@ -32,6 +32,7 @@ public class BookService {
                 () -> new RuntimeException("Livro não encontrado"));
         Book bookUpdated = Book.builder()
                 //evita que eu tenha que passar todos os dados novamente
+                .id(bookEntity.getId())
                 .title(book.getTitle() != null ? book.getTitle() : bookEntity.getTitle())
                 .author(book.getAuthor() != null ? book.getAuthor() : bookEntity.getAuthor())
                 .publicationYear(book.getPublicationYear() != 0 ? book.getPublicationYear() : bookEntity.getPublicationYear())

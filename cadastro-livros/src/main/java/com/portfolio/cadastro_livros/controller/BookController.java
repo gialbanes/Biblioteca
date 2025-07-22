@@ -31,7 +31,7 @@ public class BookController {
 
     @PutMapping
     public ResponseEntity<Void> updateBookById(@RequestParam Long id, @RequestBody Book book){
-        bookService.saveBook(book);
+        bookService.updateBookById(id, book);
         return ResponseEntity.ok().build();
     }
 }
