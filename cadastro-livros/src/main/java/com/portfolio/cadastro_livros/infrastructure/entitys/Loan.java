@@ -28,5 +28,11 @@ public class Loan {
     private LocalDate dateLoan;
 
     private LocalDate dateReturn;
+
+    private String status;
+
+    private LocalDate expectedReturnDate;
+
+    private Double lateFee;
 }
 
