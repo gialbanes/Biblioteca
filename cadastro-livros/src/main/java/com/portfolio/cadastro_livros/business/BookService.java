@@ -14,7 +14,7 @@ public class BookService {
     }
 
     public void saveBook(Book book){
-        repository.saveAndFlush(book); //salva e fecha a conexão com o BD
+        repository.save(book); //salva e fecha a conexão com o BD
     }
 
     public Book findBookById(Long id){
@@ -39,6 +39,6 @@ public class BookService {
                 .genre(book.getGenre() != null ? book.getGenre() : bookEntity.getGenre())
                 .build();
 
-        repository.saveAndFlush(bookUpdated);
+        repository.save(bookUpdated);
     }
 }

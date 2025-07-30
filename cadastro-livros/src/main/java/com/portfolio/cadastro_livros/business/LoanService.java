@@ -14,7 +14,7 @@ public class LoanService {
     }
 
     public void saveLoan(Loan loan){
-        repository.saveAndFlush(loan);
+        repository.save(loan);
     }
 
     public Loan findLoanById(Long id){
@@ -37,7 +37,7 @@ public class LoanService {
                 .expectedReturnDate(loan.getExpectedReturnDate() != null ? loan.getExpectedReturnDate() : loanEntity.getExpectedReturnDate())
                 .lateFee(loan.getLateFee() != null ? loan.getLateFee() : loanEntity.getLateFee())
                 .build();
-        repository.saveAndFlush(loanUpdated);
+        repository.save(loanUpdated);
     }
 
     public void deleteLoan(Long id){

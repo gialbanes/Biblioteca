@@ -13,7 +13,7 @@ public class UserService {
     }
 
     public void saveUser(User user){
-        repository.saveAndFlush(user);
+        repository.save(user);
     }
 
     public User findUserById(Long id){
@@ -33,7 +33,7 @@ public class UserService {
                 .phone(user.getPhone() != null ? user.getPhone() : userEntity.getPhone())
                 .dateBirth(user.getDateBirth() != null ? user.getDateBirth() : userEntity.getDateBirth())
                 .build();
-        repository.saveAndFlush(userUpdated);
+        repository.save(userUpdated);
     }
 
     public void deleteUser(Long id){
