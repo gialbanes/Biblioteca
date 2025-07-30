@@ -13,7 +13,7 @@ import lombok.*;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //gera o ID automaticamente
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) //gera o ID automaticamente
     private Long id;
 
     @Column(nullable = false)
@@ -22,7 +22,7 @@ public class Book {
     @Column(nullable = false)
     private String author;
 
-    private int publicationYear;
+    private Integer publicationYear;
     private String genre;
 }
 

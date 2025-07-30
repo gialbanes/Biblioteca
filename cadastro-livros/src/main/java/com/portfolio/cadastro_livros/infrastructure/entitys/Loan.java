@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class Loan {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @ManyToOne //uso ManyToOne para relacionamento para referenciar User e Book
