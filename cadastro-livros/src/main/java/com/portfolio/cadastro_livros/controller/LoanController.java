@@ -1,6 +1,7 @@
 package com.portfolio.cadastro_livros.controller;
 
 import com.portfolio.cadastro_livros.business.LoanService;
+import com.portfolio.cadastro_livros.infrastructure.dtos.LoanDTO;
 import com.portfolio.cadastro_livros.infrastructure.entitys.Loan;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +14,8 @@ public class LoanController {
     private final LoanService loanService;
 
     @PostMapping
-    public ResponseEntity<Void> saveLoan(@RequestBody Loan loan){
-        loanService.saveLoan(loan);
+    public ResponseEntity<Void> saveLoan(@RequestBody LoanDTO loanDTO){
+        loanService.saveLoan(loanDTO);
         return ResponseEntity.ok().build();
     }
 
